@@ -38,14 +38,14 @@
 
   async function initialize() {
     try {
-      const response = await fetch('slides.json');
+      const response = await fetch('slides.json', { cache: 'no-store' });
       if (!response.ok) throw new Error(`No se pudo cargar slides.json (${response.status})`);
       const filenames = await response.json();
       if (!Array.isArray(filenames) || !filenames.length || !filenames.every(name => typeof name === 'string' && /^[a-zA-Z0-9_-]+\.html$/.test(name))) {
         throw new Error('slides.json debe contener una lista de nombres HTML válidos.');
       }
       const fragments = await Promise.all(filenames.map(async filename => {
-        const result = await fetch(`slides/${filename}`);
+        const result = await fetch(`slides/${filename}`, { cache: 'no-store' });
         if (!result.ok) throw new Error(`No se pudo cargar ${filename} (${result.status})`);
         const documentFragment = new DOMParser().parseFromString(await result.text(), 'text/html');
         const section = documentFragment.body.querySelector(':scope > section.slide');
