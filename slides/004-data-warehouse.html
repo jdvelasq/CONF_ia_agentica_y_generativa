@@ -1,0 +1,48 @@
+<section class="slide content warehouse" aria-label="1985 — Data Warehouse">
+  <header class="slide-heading"><h2>1985 — Data Warehouse</h2></header>
+  <div class="warehouse-body">
+    <div class="warehouse-top">
+      <aside class="warehouse-question">¿Cómo conservar la información histórica cuando las bases de datos operacionales actualizan continuamente sus registros?</aside>
+      <aside class="warehouse-key"><strong>Idea clave:</strong><br>El Data Warehouse preserva la memoria histórica de la organización para apoyar el análisis y la toma de decisiones.</aside>
+    </div>
+    <div class="warehouse-main">
+      <div class="warehouse-explain">
+        <p><strong>Data Warehouse:</strong> repositorio corporativo orientado al análisis que integra información histórica procedente de distintas fuentes de datos.</p>
+        <h3>Arquitectura</h3>
+        <ul><li>Orientado a temas</li><li>Integrado</li><li>Diseñado para análisis y consulta</li></ul>
+        <h3>Información</h3>
+        <ul><li>No volátil</li><li>Variable en el tiempo</li><li>Histórica</li></ul>
+      </div>
+      <div class="warehouse-visual">
+        <svg viewBox="0 0 820 520" role="img" aria-label="Varias bases de datos operacionales y fuentes externas pasan por un proceso ETL para alimentar un Data Warehouse, que se consulta mediante SQL y herramientas de reportes.">
+          <defs>
+            <g id="database" stroke="#343434" stroke-width="2.3" fill="#fff">
+              <path d="M0 16 V92 C0 114 120 114 120 92 V16"/>
+              <ellipse cx="60" cy="16" rx="60" ry="16"/>
+              <path d="M0 36 C0 58 120 58 120 36 M0 56 C0 78 120 78 120 56 M0 76 C0 98 120 98 120 76" fill="none"/>
+            </g>
+            <marker id="dw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4E79A7"/></marker>
+          </defs>
+          <text x="138" y="40" text-anchor="middle" class="dw-label">RDBMS</text>
+          <text x="138" y="69" text-anchor="middle" class="dw-small">Sistemas operacionales</text>
+          <use href="#database" transform="translate(38 102) scale(.75)"/>
+          <use href="#database" transform="translate(112 145) scale(.75)"/>
+          <use href="#database" transform="translate(52 345) scale(.75)"/>
+          <text x="95" y="473" text-anchor="middle" class="dw-small">Fuentes externas</text>
+          <path d="M228 194 H275 V261 H325 M145 390 H275 V300 H325" stroke="#666" stroke-width="3" fill="none"/>
+          <rect x="323" y="243" width="90" height="70" rx="10" fill="#F28E2B"/>
+          <text x="368" y="287" text-anchor="middle" class="dw-label" fill="#fff">ETL</text>
+          <path d="M413 278 H493" stroke="#4E79A7" stroke-width="5" marker-end="url(#dw-arrow)"/>
+          <text x="571" y="124" text-anchor="middle" class="dw-label">Data Warehouse</text>
+          <use href="#database" transform="translate(503 160) scale(1.16 1.45)"/>
+          <path d="M647 278 H707" stroke="#4E79A7" stroke-width="5" marker-end="url(#dw-arrow)"/>
+          <text x="716" y="240" class="dw-small">Consulta</text>
+          <text x="716" y="273" class="dw-small">y análisis</text>
+          <text x="716" y="316" class="dw-small">SQL</text>
+          <text x="716" y="348" class="dw-small">Reportes</text>
+          <text x="716" y="380" class="dw-small">BI</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
