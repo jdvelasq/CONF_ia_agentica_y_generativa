@@ -21,4 +21,3 @@ Abrir http://localhost:8000/. Navegar con las flechas; pulsar **F** para pantall
 - `index.html`: visor; no contiene diapositivas.
 - `assets/`: imágenes y diagramas SVG.
 
-Para publicar: **Settings → Pages → Deploy from a branch → main → /(root)**.
